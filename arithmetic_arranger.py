@@ -4,6 +4,7 @@ def arithmetic_arranger(prbs, solution=None):
 
         dashes = "-"
         space = " "
+        Operator = ("+", "-")
 
         line1 = []
         line2 = []
@@ -17,21 +18,21 @@ def arithmetic_arranger(prbs, solution=None):
             op = prb[1]
             num_2 = prb[2]
 
-            # Rules
+        # Rules
             if len(prbs) > 5:
                 return print("Error:too many problems.")
 
-            Operator = ("+", "-")
             if op not in Operator:
-                print("Error: Operator must be ´+´ or ´-´.")
+                return print("Error: Operator must be ´+´ or ´-´.")
 
             if len(num_1) > 4 or len(num_2) > 4:
                 return print("Error: Numbers cannot be more than four digits")
 
-            if num_1.isdigit and num_2.isdigit == False:
-                print("Error: Numbers must contain digits.")
+            if num_1.isdigit() and num_2.isdigit() == False:
+                return print("Error: Numbers must contain digits.")
 
-        # lines input
+
+        # fill the lines
             spaces_to_fill = (max(len(x) for x in prb))
             answers = (str(eval(num)))
 
